@@ -1,6 +1,6 @@
 ## Tenner Grid Puzzle Solver
 # Overview
-Tenner Grid puzzles present a fascinating challenge in combinatorial problem solving. The objective is to fill a 3x10 grid with numbers while adhering to a set of constraints. This solver tackles the puzzle by modeling it as a Constraint Satisfaction Problem (CSP), utilizing different algorithms such as Backtracking, Forward Checking, and Forward Checking with MRV heuristics.
+Tenner Grid puzzles present a fascinating challenge in combinatorial problem solving. The objective is to fill a grid with numbers while adhering to a set of constraints. This solver tackles the puzzle by modeling it as a Constraint Satisfaction Problem (CSP), utilizing different algorithms such as Backtracking, Forward Checking, and Forward Checking with MRV heuristics.
 # Problem Formulation
 Variables: cells represented by it's coordinate on a matrix.
 Domain: the set from 0-9
