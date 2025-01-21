@@ -1,5 +1,5 @@
 ## Tenner Grid Puzzle Solver
-#Overview
+# Overview
 Tenner Grid puzzles present a fascinating challenge in combinatorial problem solving. The objective is to fill a 3x10 grid with numbers while adhering to a set of constraints. This solver tackles the puzzle by modeling it as a Constraint Satisfaction Problem (CSP), utilizing different algorithms such as Backtracking, Forward Checking, and Forward Checking with MRV heuristics.
 #Problem Formulation
 Variables: cells represented by it's coordinate on a matrix e.g {C0,0, C0,1, …}.
@@ -10,7 +10,7 @@ Constraints:
 3. Numbers in the columns must add up to the given sums.
 4. Numbers in contiguous cells must be different.
 
-#Algorithms
+# Algorithms
 1. Backtracking: The backtracking algorithm recursively explores possible assignments of values (from 0 to 9) to cells, ensuring that the puzzle's constraints are met.
 The recursive step attempts to assign values to the current empty cell. If a value satisfies the puzzle's rules, it moves to the next cell and repeats. If no valid value is found, the algorithm backtracks, resetting the current cell to -1 and trying the next value in the previous recursive call. This continues until a solution is found, or it is determined that no solution exists.
 
@@ -18,7 +18,7 @@ The recursive step attempts to assign values to the current empty cell. If a val
   
 5. Forward Checking with MRV (Most Restrained Variable): This algorithm builds on Forward Checking by introducing the concept of the Most Restrained Variable (MRV). The MRV heuristic prioritizes the cell with the fewest remaining valid values in its domain by firstly finding the empty cell with the smallest domain size, it then proceeds as in Forward Checking, with the added benefit of pruning search branches more quickly by focusing on the most constrained cells first.
 
-#Results and Analysis
+# Results and Analysis
 It is observed that Simple Backtracking still solves the Tenner Grid problem despite being the least efficient among the three tested algorithms. Since, it requires the highest median number of consistency checks, indicating that it explores a larger portion of the search space before finding a solution. This suggests that Simple Backtracking may struggle with larger or more complex instances of the Tenner Grid problem due to its exhaustive search approach. 
 
 Forward Checking improves upon Simple Backtracking by pruning the search space more aggressively. As a result, fewer consistency checks are required to find a solution to the Tenner Grid problem. However, it was still outperformed by Forward Checking with MRV, suggesting that there is still room for improvement in reducing the search space further.
